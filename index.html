@@ -6,9 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>A thought for today</title>
 <style>
-:root{--bg:#f4f1ec;--ink:#2b2b2b;--card:#ffffff;--chip:#e6e1d8;--chipon:#2b2b2b;--chipinkon:#fff;--shadow:0 8px 30px rgba(0,0,0,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17191c;--ink:#ecebe8;--card:#22262b;--chip:#2d3238;--chipon:#ecebe8;--chipinkon:#17191c;--shadow:0 8px 30px rgba(0,0,0,.4);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#17191c;--ink:#ecebe8;--card:#22262b;--chip:#2d3238;--chipon:#ecebe8;--chipinkon:#17191c;--shadow:0 8px 30px rgba(0,0,0,.4);color-scheme:dark}
+:root{--bg:#F4F0E8;--ink:#000000;--card:#ffffff;--chip:#e4dfd3;--btn:#000000;--btnink:#DFFF38;--accent:#DFFF38;--accentink:#000000;--shadow:0 8px 30px rgba(0,0,0,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%}
 body{background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;display:flex;flex-direction:column;align-items:center;padding:20px 16px 32px}
@@ -21,15 +19,17 @@ main{width:100%;max-width:520px;display:flex;flex-direction:column;gap:18px;flex
 .tag{position:absolute;top:14px;left:0;right:0;font:600 .7rem system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
 .card.hasimg .tag{color:#fff}
 button{font:inherit;cursor:pointer;border:0}
-.another{font:600 1rem system-ui,sans-serif;padding:14px;border-radius:14px;background:var(--ink);color:var(--bg)}
+.another{font:600 1rem system-ui,sans-serif;padding:14px;border-radius:14px;background:var(--btn);color:var(--btnink)}
 .more{font:.8rem system-ui,sans-serif;opacity:.65;text-align:center;margin:6px 0 -6px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .chip{font:.85rem system-ui,sans-serif;padding:8px 14px;border-radius:999px;background:var(--chip);color:var(--ink)}
-.chip[aria-pressed="true"]{background:var(--chipon);color:var(--chipinkon)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accentink)}
+.logo{display:block;margin:0 auto;max-width:200px;width:60%;height:auto;background:#fff;border-radius:14px;padding:6px}
 </style>
 </head>
 <body>
 <main>
+  <img src="images/logo.png" alt="Mindtek Counselling" class="logo">
   <div class="card" id="card"><span class="tag" id="tag"></span><p class="txt" id="txt"></p></div>
   <button class="another" id="again">Show me another</button>
   <p class="more">Want something for a particular feeling?</p>
