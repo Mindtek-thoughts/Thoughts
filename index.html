@@ -19,7 +19,6 @@ main{width:100%;max-width:520px;display:flex;flex-direction:column;gap:18px;flex
 .tag{position:absolute;top:14px;left:0;right:0;font:600 .7rem system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
 .card.hasimg .tag{color:#fff}
 button{font:inherit;cursor:pointer;border:0}
-.another{font:600 1rem system-ui,sans-serif;padding:14px;border-radius:14px;background:var(--btn);color:var(--btnink)}
 .more{font:.8rem system-ui,sans-serif;opacity:.65;text-align:center;margin:6px 0 -6px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .chip{font:.85rem system-ui,sans-serif;padding:8px 14px;border-radius:999px;background:var(--chip);color:var(--ink)}
@@ -33,7 +32,6 @@ button{font:inherit;cursor:pointer;border:0}
 <main>
   <img src="images/logo.png" alt="Mindtek Counselling" class="logo">
   <div class="card" id="card"><span class="tag" id="tag"></span><p class="txt" id="txt"></p></div>
-  <button class="another" id="again">Show me another</button>
   <p class="more">Want something for a particular feeling?</p>
   <div class="chips" id="chips"></div>
   <a class="site" href="https://mindtek.co.nz" target="_blank" rel="noopener">visit mindtek.co.nz</a>
@@ -137,7 +135,6 @@ function renderChips(){
   });
 }
 
-document.getElementById('again').onclick = () => show(true);
 renderChips();
 show(false);   // a saying appears immediately, no menu first
 </script>
