@@ -106,7 +106,7 @@ if (fromHash) current = fromHash;
 // Avoid repeating the last saying across scans (per phone)
 try { const v = localStorage.getItem('lastIdx'); if (v !== null) lastIdx = +v; } catch(e){}
 
-function pool(){ return SAYINGS.map((s,i)=>({s,i})).filter(o => current==="All" || o.s.c===current); }
+function pool(){ return SAYINGS.map((s,i)=>({s,i})).filter(o => current==="All" || (o.s.c||"").split("|").includes(current)); }
 
 function show(animate){
   const p = pool();
@@ -117,7 +117,7 @@ function show(animate){
   const apply = () => {
     txt.textContent = choice.s.t;
     if (choice.s.a){ const by=document.createElement('span'); by.className='by'; by.textContent='— '+choice.s.a; txt.appendChild(by); }
-    tag.textContent = choice.s.c;
+    tag.textContent = (choice.s.c||"").split("|").join(" · ");
     if (choice.s.img){ card.style.backgroundImage = 'url("'+choice.s.img+'")'; card.classList.add('hasimg'); }
     else { card.style.backgroundImage = ''; card.classList.remove('hasimg'); }
     card.classList.remove('fade');
